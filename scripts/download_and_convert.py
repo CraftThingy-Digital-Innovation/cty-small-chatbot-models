@@ -47,7 +47,7 @@ def main():
     parser = argparse.ArgumentParser(description="Download and convert LLM models to ONNX format for cty-small-chatbot-models.")
     parser.add_argument("--model", type=str, required=True, 
                         help="Hugging Face model ID (e.g. 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', 'meta-llama/Llama-3.2-1B-Instruct')")
-    parser.add_argument("--category", type=str, choices=['llama', 'qwen', 'smollm', 'minicpm'], required=True,
+    parser.add_argument("--category", type=str, choices=['llama', 'qwen', 'smollm', 'minicpm', 'gemma', 'phi'], required=True,
                         help="Model family directory category")
     parser.add_argument("--quantize", action="store_true", help="Apply 8-bit dynamic quantization to the output model")
     
