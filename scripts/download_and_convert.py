@@ -69,17 +69,18 @@ def main():
         shutil.rmtree(temp_dir)
     os.makedirs(temp_dir, exist_ok=True)
     
-    print(f"[-] Exporting model '{args.model}' via Optimum CLI...")
+    print(f"[-] Exporting model '{args.model}' via Optimum Python API...")
     try:
-        # Run optimum-cli export command
-        cmd = [
-            "optimum-cli", "export", "onnx",
-            "--model", args.model,
-            "--task", "text-generation-with-past",
-            temp_dir
-        ]
-        print(f"[-] Running command: {' '.join(cmd)}")
-        subprocess.run(cmd, check=True)
+        from optimum.onnxruntime import ORTModelForCausalLM
+        from transformers import AutoTokenizer
+
+        print(f"[-] Downloading and exporting '{args.model}' to ONNX (this may take a few minutes)...")
+        model = ORTModelForCausalLM.from_pretrained(args.model, export=True)
+        tokenizer = AutoTokenizer.from_pretrained(args.model)
+
+        print(f"[-] Saving model and tokenizer to temp directory...")
+        model.save_pretrained(temp_dir)
+        tokenizer.save_pretrained(temp_dir)
         print("[+] Model exported to ONNX successfully.")
         
         # Check files in temp folder and move to target folder
