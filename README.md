@@ -15,9 +15,11 @@ Seluruh aset model biner di repositori ini didistribusikan secara aman menggunak
 ### 1. Struktur Folder
 Aset model ini diorganisasikan ke dalam direktori berdasarkan keluarga model:
 *   `llama/`: Berisi model-model Llama (seperti Llama-3.2-1B-Instruct).
-*   `qwen/`: Berisi model-model Qwen (seperti Qwen2.5-1.5B-Instruct).
+*   `qwen/`: Berisi model-model Qwen (seperti Qwen2.5-1.5B-Instruct atau DeepSeek-R1 Qwen Distill).
 *   `smollm/`: Berisi model-model SmolLM (seperti SmolLM2-135M-Instruct).
 *   `minicpm/`: Berisi model-model MiniCPM (seperti MiniCPM5-1B-GGUF).
+*   `gemma/`: Berisi model-model Gemma (seperti Gemma-2-2B-it).
+*   `phi/`: Berisi model-model Phi (seperti Phi-3.5-mini-instruct).
 
 ### 2. Opsi Kinerja ORT (FlatBuffers Serialization)
 Berkas berakhiran `.ort` adalah model teroptimasi FlatBuffers untuk browser:
@@ -34,9 +36,11 @@ All binary weights are stored and tracked using **Git Large File Storage (LFS)**
 ### 1. Folder Structure
 Models are organized in subdirectories based on model families:
 *   `llama/`: Contains Llama model checkpoints (e.g. Llama-3.2-1B-Instruct).
-*   `qwen/`: Contains Qwen model checkpoints (e.g. Qwen2.5-1.5B-Instruct).
+*   `qwen/`: Contains Qwen model checkpoints (e.g. Qwen2.5-1.5B-Instruct or DeepSeek-R1 Qwen Distill).
 *   `smollm/`: Contains SmolLM model checkpoints (e.g. SmolLM2-135M-Instruct).
 *   `minicpm/`: Contains MiniCPM model checkpoints (e.g. MiniCPM5-1B-GGUF).
+*   `gemma/`: Contains Gemma model checkpoints (e.g. Gemma-2-2B-it).
+*   `phi/`: Contains Phi model checkpoints (e.g. Phi-3.5-mini-instruct).
 
 ### 2. ORT Graph Optimization Options (FlatBuffers)
 Files ending in `.ort` represent serialized model graphs in ONNX Runtime's native **FlatBuffers** format.
