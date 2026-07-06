@@ -25,7 +25,6 @@ Daftar model yang tersedia:
 *   **smollm/SmolLM2-135M-Instruct/**: Hugging Face SmolLM2 135M Instruct (4-bit ONNX)
 *   **minicpm/MiniCPM5-1B/**: OpenBMB MiniCPM5 1B (Q4_K_M GGUF)
 *   **phi/Phi-3.5-mini-instruct/**: Microsoft Phi-3.5 Mini Instruct (4-bit ONNX)
-*   **gemma/gemma-2-2b-it/**: Google Gemma-2 2B Instruct (4-bit ONNX)
 
 ### 2. Opsi Kinerja ORT (FlatBuffers Serialization)
 Berkas berakhiran `.ort` adalah model teroptimasi FlatBuffers untuk browser:
@@ -49,7 +48,6 @@ Berikut adalah hasil benchmark kinerja inferensi lokal menggunakan **Transformer
 | **Qwen2.5-1.5B-Instruct** | 1.5B | ~950 MB | WebGPU (GTX 1070) | ~6.2s | ~68 tok/s | **~36 tok/s** |
 | **DeepSeek-R1-Distill-Qwen-1.5B** | 1.5B | ~950 MB | WebGPU (GTX 1070) | ~6.5s | ~64 tok/s | **~33 tok/s** |
 | **Phi-3.5-mini-instruct** | 3.8B | ~2.2 GB | WebGPU (GTX 1070) | ~14.5s | ~42 tok/s | **~16 tok/s** |
-| **gemma-2-2b-it** | 2.6B | ~1.4 GB | WebGPU (GTX 1070) | ~9.2s | ~62 tok/s | **~23 tok/s** |
 | **MiniCPM5-1B** | 1.0B | ~656 MB | Ollama (Local) | ~2.5s | ~145 tok/s | **~42 tok/s** |
 
 ---
@@ -73,7 +71,6 @@ List of available models:
 *   **smollm/SmolLM2-135M-Instruct/**: Hugging Face SmolLM2 135M Instruct (4-bit ONNX)
 *   **minicpm/MiniCPM5-1B/**: OpenBMB MiniCPM5 1B (Q4_K_M GGUF)
 *   **phi/Phi-3.5-mini-instruct/**: Microsoft Phi-3.5 Mini Instruct (4-bit ONNX)
-*   **gemma/gemma-2-2b-it/**: Google Gemma-2 2B Instruct (4-bit ONNX)
 
 ### 2. ORT Graph Optimization Options (FlatBuffers)
 Files ending in `.ort` represent serialized model graphs in ONNX Runtime's native **FlatBuffers** format.
@@ -97,7 +94,6 @@ Below are the actual local inference performance benchmarks measured using **Tra
 | **Qwen2.5-1.5B-Instruct** | 1.5B | ~950 MB | WebGPU (GTX 1070) | ~6.2s | ~68 tok/s | **~36 tok/s** |
 | **DeepSeek-R1-Distill-Qwen-1.5B** | 1.5B | ~950 MB | WebGPU (GTX 1070) | ~6.5s | ~64 tok/s | **~33 tok/s** |
 | **Phi-3.5-mini-instruct** | 3.8B | ~2.2 GB | WebGPU (GTX 1070) | ~14.5s | ~42 tok/s | **~16 tok/s** |
-| **gemma-2-2b-it** | 2.6B | ~1.4 GB | WebGPU (GTX 1070) | ~9.2s | ~62 tok/s | **~23 tok/s** |
 | **MiniCPM5-1B** | 1.0B | ~656 MB | Ollama (Local) | ~2.5s | ~145 tok/s | **~42 tok/s** |
 
 ---
